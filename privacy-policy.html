@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rovex Privacy Policy — how we collect, use, and protect your data." />
+  <title>Privacy Policy — Rovex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #070b14;
+      --surface: #0f172a;
+      --card: #1e293b;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.35);
+      --mint: #34d399;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: rgba(148, 163, 184, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .mesh {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% -10%, var(--accent-glow), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 90% 80%, rgba(52, 211, 153, 0.12), transparent 45%),
+        radial-gradient(circle at 50% 50%, #0a1020, var(--bg));
+    }
+    .grid-lines {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.04;
+      background-image:
+        linear-gradient(var(--muted) 1px, transparent 1px),
+        linear-gradient(90deg, var(--muted) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(7, 11, 20, 0.85);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), #6366f1);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 1.25rem;
+      box-shadow: 0 8px 24px var(--accent-glow);
+    }
+    .logo span { font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em; }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.4rem 0.9rem;
+      border-radius: 8px;
+      transition: color 0.2s, background 0.2s;
+    }
+    nav a:hover { color: var(--text); background: var(--card); }
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 2.5rem 0 3rem;
+    }
+    .badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--mint);
+      background: rgba(52, 211, 153, 0.1);
+      border: 1px solid rgba(52, 211, 153, 0.25);
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(180deg, #fff 0%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p { color: var(--muted); font-size: 1.05rem; max-width: 540px; margin: 0 auto; }
+    .updated {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .toc h2 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      gap: 0.5rem;
+    }
+    @media (min-width: 600px) {
+      .toc ol { grid-template-columns: 1fr 1fr; }
+    }
+    .toc li { counter-increment: toc; }
+    .toc a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s;
+    }
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      min-width: 1.5rem;
+    }
+    .toc a:hover { color: var(--text); }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem 1.85rem;
+      margin-bottom: 1.25rem;
+      transition: border-color 0.25s;
+    }
+    section:hover { border-color: rgba(59, 130, 246, 0.25); }
+    section h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    section h2 .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      background: rgba(59, 130, 246, 0.12);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+    }
+    section h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1.25rem 0 0.5rem;
+      color: #cbd5e1;
+    }
+    section p, section li { color: var(--muted); font-size: 0.98rem; margin-bottom: 0.75rem; }
+    section ul { padding-left: 1.25rem; margin-bottom: 0.75rem; }
+    section li { margin-bottom: 0.4rem; }
+  section strong { color: var(--text); font-weight: 600; }
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(99, 102, 241, 0.06));
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.15rem;
+      border-radius: 0 10px 10px 0;
+      margin: 1rem 0;
+    }
+    .highlight-box p { margin: 0; color: #cbd5e1; }
+    a { color: var(--accent); }
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="mesh"></div>
+  <div class="grid-lines"></div>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="privacy-policy.html">
+        <div class="logo-mark">R</div>
+        <span>Rovex</span>
+      </a>
+      <nav>
+        <a href="terms-of-service.html">Terms</a>
+        <a href="mailto:support@rovex.app">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <span class="badge">Legal · Privacy</span>
+      <h1>Privacy Policy</h1>
+      <p>Transparent information about how Rovex handles your data when you use our dialer, SMS, and Caller ID features.</p>
+      <p class="updated">Last updated: 1 June 2026</p>
+    </div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#collect">Data we collect</a></li>
+        <li><a href="#use">How we use data</a></li>
+        <li><a href="#share">Sharing & processors</a></li>
+        <li><a href="#permissions">Device permissions</a></li>
+        <li><a href="#retention">Retention</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#changes">Policy changes</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <section id="intro">
+      <h2><span class="num">01</span> Introduction</h2>
+      <p>
+        Rovex (“we”, “our”, “us”) operates the mobile application <strong>Rovex</strong> (package name
+        <code style="font-family: JetBrains Mono, monospace; font-size: 0.85em; color: var(--accent);">com.abbas.rovex</code>)
+        and related services. This Privacy Policy explains what information we collect, why we collect it,
+        how we store and protect it, and what choices you have.
+      </p>
+      <div class="highlight-box">
+        <p><strong>Important:</strong> Rovex offers community Caller ID, which may involve uploading contact names and phone numbers you choose to sync. We ask for your explicit consent in the app before you continue.</p>
+      </div>
+      <p>By using Rovex, you agree to this Privacy Policy. If you do not agree, please do not use the app.</p>
+    </section>
+
+    <section id="collect">
+      <h2><span class="num">02</span> Information we collect</h2>
+
+      <h3>Account information</h3>
+      <p>When you sign in with Google and verify your phone number, we may collect:</p>
+      <ul>
+        <li>Display name and email address (from Google sign-in)</li>
+        <li>Phone number (for verification and Caller ID profile linking)</li>
+        <li>Firebase user ID and authentication tokens</li>
+        <li>FCM device token (for push notifications)</li>
+      </ul>
+
+      <h3>Contacts</h3>
+      <p>With your permission, we read contact names and phone numbers on your device to:</p>
+      <ul>
+        <li>Display names in call logs, SMS, and search</li>
+        <li>Sync contacts to our secure backend (Supabase) for Caller ID and directory features you enable</li>
+      </ul>
+
+      <h3>Call logs & phone activity</h3>
+      <p>With permission, we access call history and phone state to show your call log, detect calls, provide Caller ID overlays, call screening, and spam blocking.</p>
+
+      <h3>SMS & MMS</h3>
+      <p>If you use Rovex as your SMS app or grant SMS permissions, we process message metadata and content on your device to display conversations, send messages, and optionally detect OTP codes for convenience. We do not sell SMS content.</p>
+
+      <h3>Caller ID lookups</h3>
+      <p>For unknown numbers, we may send a normalized phone number to our servers to retrieve a suggested caller name. Results may be cached locally on your device.</p>
+
+      <h3>VoIP (in-app calls)</h3>
+      <p>Voice and video calls through Agora use microphone and camera only during active calls you initiate or answer inside Rovex.</p>
+
+      <h3>Notification metadata (optional)</h3>
+      <p>If you enable Notification Access, we may read notification titles/text from WhatsApp <em>call alerts</em> to show caller names for WhatsApp calls. We do not access WhatsApp chat messages through this feature.</p>
+
+      <h3>Technical & usage data</h3>
+      <ul>
+        <li>Device type, OS version, app version</li>
+        <li>Crash logs and analytics (via Firebase Analytics, if enabled)</li>
+        <li>IP address and general network information when connecting to our servers</li>
+      </ul>
+    </section>
+
+    <section id="use">
+      <h2><span class="num">03</span> How we use your information</h2>
+      <p>We use collected information to:</p>
+      <ul>
+        <li>Provide dialer, SMS, Caller ID, spam blocking, and VoIP features</li>
+        <li>Authenticate your account and prevent abuse</li>
+        <li>Improve app performance, reliability, and security</li>
+        <li>Send service-related push notifications (e.g. incoming call or message alerts)</li>
+        <li>Comply with legal obligations where applicable</li>
+      </ul>
+      <p>We do <strong>not</strong> sell your personal information to third parties.</p>
+    </section>
+
+    <section id="share">
+      <h2><span class="num">04</span> Sharing & service providers</h2>
+      <p>We use trusted processors to operate Rovex:</p>
+      <ul>
+        <li><strong>Google Firebase</strong> — Authentication, Cloud Firestore, Cloud Messaging, Analytics, Storage</li>
+        <li><strong>Supabase</strong> — Contact sync and Caller ID database (hosted infrastructure)</li>
+        <li><strong>Agora</strong> — Real-time voice and video communication</li>
+        <li><strong>Google Play Services</strong> — Sign-in and device services</li>
+      </ul>
+      <p>These providers process data under their own terms and only as needed to deliver our features. We may also disclose information if required by law or to protect rights, safety, and security.</p>
+    </section>
+
+    <section id="permissions">
+      <h2><span class="num">05</span> Device permissions</h2>
+      <p>Rovex may request permissions including: contacts, phone, call log, SMS, camera, microphone, overlay (display over other apps), notification access, and battery optimization exemption. Each permission supports a visible feature. You can revoke permissions anytime in Android Settings.</p>
+    </section>
+
+    <section id="retention">
+      <h2><span class="num">06</span> Data retention</h2>
+      <p>We retain account and synced data while your account is active and as needed to provide services. Local data on your device is removed when you uninstall the app. Server-side data is deleted or anonymized within a reasonable period after a verified deletion request, unless we must retain it for legal reasons.</p>
+    </section>
+
+    <section id="rights">
+      <h2><span class="num">07</span> Your rights & choices</h2>
+      <p>Depending on your region, you may have the right to:</p>
+      <ul>
+        <li>Access, correct, or delete your personal data</li>
+        <li>Withdraw consent (e.g. revoke permissions or stop contact sync)</li>
+        <li>Object to or restrict certain processing</li>
+        <li>Lodge a complaint with a data protection authority</li>
+      </ul>
+      <p>To request account or cloud data deletion, email us at <a href="mailto:privacy@rovex.app">privacy@rovex.app</a> from the address linked to your account, including your registered phone number. We will respond within 30 days where possible.</p>
+    </section>
+
+    <section id="children">
+      <h2><span class="num">08</span> Children</h2>
+      <p>Rovex is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us data, contact us and we will delete it.</p>
+    </section>
+
+    <section id="security">
+      <h2><span class="num">09</span> Security</h2>
+      <p>We use industry-standard measures including HTTPS/TLS for data in transit and access controls on our backends. No method of transmission or storage is 100% secure; we cannot guarantee absolute security.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">10</span> Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will post the new version on this page and update the “Last updated” date. Continued use after changes means you accept the updated policy.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">11</span> Contact us</h2>
+      <p>For privacy questions or data requests:</p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:privacy@rovex.app">privacy@rovex.app</a><br />
+        <strong>Support:</strong> <a href="mailto:support@rovex.app">support@rovex.app</a><br />
+        <strong>App:</strong> Rovex (com.abbas.rovex)
+      </p>
+      <p style="margin-top: 1rem; font-size: 0.9rem;">Also see our <a href="terms-of-service.html">Terms of Service</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Rovex · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-service.html">Terms</a></p>
+  </footer>
+</body>
+</html>
