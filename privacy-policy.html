@@ -268,6 +268,7 @@
         <li><a href="#collect">Data we collect</a></li>
         <li><a href="#use">How we use data</a></li>
         <li><a href="#share">Sharing & processors</a></li>
+        <li><a href="#whatsapp-accessibility">WhatsApp & Accessibility</a></li>
         <li><a href="#permissions">Device permissions</a></li>
         <li><a href="#retention">Retention</a></li>
         <li><a href="#rights">Your rights</a></li>
@@ -327,6 +328,15 @@
       <h3>Notification metadata (optional)</h3>
       <p>If you enable Notification Access, we may read notification titles/text from WhatsApp <em>call alerts</em> to show caller names for WhatsApp calls. We do not access WhatsApp chat messages through this feature.</p>
 
+      <h3>Accessibility service (optional)</h3>
+      <p>
+        If you manually enable <strong>Rovex</strong> under Android <strong>Settings → Accessibility</strong>, our
+        Accessibility Service is used <strong>only</strong> for incoming WhatsApp and WhatsApp Business voice/video calls.
+        While WhatsApp’s call screen is visible, we may read on-screen text (such as the caller name shown by WhatsApp)
+        to display caller identification inside Rovex. We do <strong>not</strong> use Accessibility to read WhatsApp
+        chats, groups, media, or content from other applications. You can disable this at any time in Accessibility settings.
+      </p>
+
       <h3>Technical & usage data</h3>
       <ul>
         <li>Device type, OS version, app version</li>
@@ -360,18 +370,49 @@
       <p>These providers process data under their own terms and only as needed to deliver our features. We may also disclose information if required by law or to protect rights, safety, and security.</p>
     </section>
 
+    <section id="whatsapp-accessibility">
+      <h2><span class="num">05</span> WhatsApp calls — Accessibility disclosure</h2>
+      <div class="highlight-box">
+        <p>
+          <strong>Single purpose:</strong> Rovex’s Accessibility Service exists only to detect
+          <strong>incoming WhatsApp / WhatsApp Business calls</strong> and show the caller name in Rovex.
+          It is <strong>not</strong> used for ads, automation of other apps, or reading your messages.
+        </p>
+      </div>
+      <p><strong>What we access (only if you turn Accessibility on for Rovex):</strong></p>
+      <ul>
+        <li>Window content from <code style="font-family: JetBrains Mono, monospace; font-size: 0.85em; color: var(--accent);">com.whatsapp</code> or <code style="font-family: JetBrains Mono, monospace; font-size: 0.85em; color: var(--accent);">com.whatsapp.w4b</code> during an active call screen</li>
+        <li>Caller name or call-related labels shown on WhatsApp’s incoming call UI</li>
+      </ul>
+      <p><strong>What we do not access:</strong></p>
+      <ul>
+        <li>WhatsApp chat messages, status, or media galleries</li>
+        <li>Banking, social, or other apps via Accessibility</li>
+        <li>Keystrokes or passwords</li>
+      </ul>
+      <p>
+        <strong>Notification access (optional):</strong> As an alternative or supplement, you may enable Notification Access
+        so Rovex can read WhatsApp <em>call</em> notifications only. Either or both features are optional; regular SIM Caller ID
+        does not require them.
+      </p>
+      <p>
+        Data read from WhatsApp call screens or notifications is processed on your device to show Caller ID in Rovex and is
+        not sold. Disable Accessibility or Notification Access anytime to stop this processing.
+      </p>
+    </section>
+
     <section id="permissions">
-      <h2><span class="num">05</span> Device permissions</h2>
-      <p>Rovex may request permissions including: contacts, phone, call log, SMS, camera, microphone, overlay (display over other apps), notification access, and battery optimization exemption. Each permission supports a visible feature. You can revoke permissions anytime in Android Settings.</p>
+      <h2><span class="num">06</span> Device permissions</h2>
+      <p>Rovex may request permissions including: contacts, phone, call log, SMS, camera, microphone, overlay (display over other apps), optional notification access, optional Accessibility (WhatsApp calls only), and battery optimization exemption. Each permission supports a visible feature described in-app before use. You can revoke permissions anytime in Android Settings.</p>
     </section>
 
     <section id="retention">
-      <h2><span class="num">06</span> Data retention</h2>
+      <h2><span class="num">07</span> Data retention</h2>
       <p>We retain account and synced data while your account is active and as needed to provide services. Local data on your device is removed when you uninstall the app. Server-side data is deleted or anonymized within a reasonable period after a verified deletion request, unless we must retain it for legal reasons.</p>
     </section>
 
     <section id="rights">
-      <h2><span class="num">07</span> Your rights & choices</h2>
+      <h2><span class="num">08</span> Your rights & choices</h2>
       <p>Depending on your region, you may have the right to:</p>
       <ul>
         <li>Access, correct, or delete your personal data</li>
@@ -383,22 +424,22 @@
     </section>
 
     <section id="children">
-      <h2><span class="num">08</span> Children</h2>
+      <h2><span class="num">09</span> Children</h2>
       <p>Rovex is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us data, contact us and we will delete it.</p>
     </section>
 
     <section id="security">
-      <h2><span class="num">09</span> Security</h2>
+      <h2><span class="num">10</span> Security</h2>
       <p>We use industry-standard measures including HTTPS/TLS for data in transit and access controls on our backends. No method of transmission or storage is 100% secure; we cannot guarantee absolute security.</p>
     </section>
 
     <section id="changes">
-      <h2><span class="num">10</span> Changes to this policy</h2>
+      <h2><span class="num">11</span> Changes to this policy</h2>
       <p>We may update this Privacy Policy from time to time. We will post the new version on this page and update the “Last updated” date. Continued use after changes means you accept the updated policy.</p>
     </section>
 
     <section id="contact">
-      <h2><span class="num">11</span> Contact us</h2>
+      <h2><span class="num">12</span> Contact us</h2>
       <p>For privacy questions, data deletion, or support:</p>
       <p>
         <strong>Developer:</strong> Abbas<br />
